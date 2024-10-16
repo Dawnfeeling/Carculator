@@ -3,7 +3,7 @@ package Level1_Carculator;
 import java.util.Scanner;
 
 // Level1 클래스 없이 기본 연산을 수행하는 계산기(완성)
-public class Level1 {
+public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -48,11 +48,19 @@ public class Level1 {
                 System.out.println("연산 결과 : " + (firstNumber / secondNumber));
             }
 
-            System.out.print("계속 하시겠습니까?(exit 입력 시 종료) : ");
-            con = sc.next();
-            if (con.equals("exit")) {  //exit 입력시 반복문 탈출
-                System.out.println("종료되었습니다.");
-                break;
+            //계산 지속 및 종료를 입력하는 반복문
+            while (true) {
+                System.out.print("계속 하시겠습니까?(yes or exit) : ");
+                con = sc.next();
+                if (con.equals("exit")) {  //exit 입력시 반복문 탈출
+                    System.out.println("종료되었습니다.");
+                    break;
+                } else if (con.equals("yes")) {
+                    System.out.println("계산을 계속합니다.");
+                } else {
+                    System.out.println("올바른 선택지를 입력해주세요.");
+                    continue;
+                }
             }
         } while (true);
     }
