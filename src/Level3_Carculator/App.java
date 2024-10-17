@@ -68,6 +68,7 @@ public class App {
                 break;
             } else {
                 System.out.println("계산을 계속합니다.");
+                System.out.println("-----------------------------------------------------------------");
             }
         } while (true);
     }
